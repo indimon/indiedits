@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+    {% block title %}Home{% endblock %}
+
+    <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" type='text/css'>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    {% block content %}
+
+    <h1 class="home-header">iGame</h1>
+    <p class="message">Game Recommendations for Everybody!</p>
+    <div>
+    <div class="user-welcome">Hello There, {{ username }}! </div>
+    <a id="user-bag" class="user-bag" href="">Your Bag</a>
+    </div>
+
+    <body style="background-color:#3B3B3B;">
+
+    <div class="home-body">
+        <div class="recommend-box">
+        <h3 class="recommend-header">Recommendations!</h3>
+
+        <div class="recommend">
+            <h5 id="recommend1">Game 1{{ gamename }}</h5>
+            <img id="r1-image" src="{{ url_for('static', filename='images/lastofus.jpg') }}" alt="Recommendation 1"
+            height="350px" />
+            <form class="interest">
+            <input type="radio" id="played" name="status" value="played">
+            <label for="played">Played</label><br>
+            <input type="radio" id="want2play" name="status" value="want2play">
+            <label for="want2play">Want to Play</label><br>
+            <input type="radio" id="no-thankyou" name="status" value="no-thankyou">
+            <label for="no-thankyou">No Thank You</label>
+            </form>
+        </div>
+
+        <div class="recommend">
+            <h5 id="recommend2">Game 2{{ gamename }}</h5>
+            <img id="r2-image" src="{{ url_for('static', filename='images/rdr2.jpg') }}" alt="Recommendation 2."
+            height="350px" />
+            <form id="r1-status" class="interest">
+            <input type="radio" id="played" name="status" value="played">
+            <label for="played">Played</label><br>
+            <input type="radio" id="want2play" name="status" value="want2play">
+            <label for="want2play">Want to Play</label><br>
+            <input type="radio" id="no-thankyou" name="status" value="no-thankyou">
+            <label for="no-thankyou">No Thank You</label>
+            </form>
+        </div>
+
+        <div class="recommend">
+            <h5 id="recommend3">Game 3{{ gamename }}</h5>
+            <img id="r3-image" src="{{ url_for('static', filename='images/godofwar.jpg') }}" alt="Recommendation 3."
+            height="350px" />
+            <form id="r3-status"  class="interest">
+            <input type="radio" id="played" name="status" value="played">
+            <label for="played">Played</label><br>
+            <input type="radio" id="want2play" name="status" value="want2play">
+            <label for="want2play">Want to Play</label><br>
+            <input type="radio" id="no-thankyou" name="status" value="no-thankyou">
+            <label for="no-thankyou">No Thank You</label>
+            </form>
+        </div>
+
+        <div class="recommend">
+            <h5 id="recommend4">Game 4{{ gamename }}</h5>
+            <img id="r4-image" src="{{ url_for('static', filename='images/ghost.jpg') }}" alt="Recommendation 4."
+            height="350px" />
+            <form id="r4-status"  class="interest">
+            <input type="radio" id="played" name="status" value="played">
+            <label for="played">Played</label><br>
+            <input type="radio" id="want2play" name="status" value="want2play">
+            <label for="want2play">Want to Play</label><br>
+            <input type="radio" id="no-thankyou" name="status" value="no-thankyou">
+            <label for="no-thankyou">No Thank You</label>
+            </form>
+        </div>
+
+        <div class="recommend">
+            <h5 id="recommend5">Game 5{{ gamename }}</h5>
+            <img id="r5-image" src="{{ url_for('static', filename='images/skyrim.jpg') }}" alt="Recommendation 5."
+            height="350px" />
+            <form id="r1-status" class="interest">
+            <input type="radio" id="played" name="status" value="played">
+            <label for="played">Played</label><br>
+            <input type="radio" id="want2play" name="status" value="want2play">
+            <label for="want2play">Want to Play</label><br>
+            <input type="radio" id="no-thankyou" name="status" value="no-thankyou">
+            <label for="no-thankyou">No Thank You</label>
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+    </body>
+    {% endblock %}
